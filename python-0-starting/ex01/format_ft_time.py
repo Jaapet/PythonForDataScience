@@ -1,6 +1,6 @@
 from datetime import datetime
 import time
-
+# usage of fstrings
 seconds = time.time()
 formatted = f"{seconds:,.4f}"
 scientific = f"{seconds:.2e}"
