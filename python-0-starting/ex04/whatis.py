@@ -7,8 +7,7 @@ try:
 		raise AssertionError("more than one argument is provided")
 	else:
 		try:
-			args = sys.argv[1:]
-			n = int(args[0])
+			n = int(sys.argv[1])
 			if n % 2 == 0:
 				print(f"I'm Even.")
 			else:
