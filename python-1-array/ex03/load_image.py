@@ -18,4 +18,4 @@ def ft_load(path: str) -> Image:
     except Exception as e:
         print(f"{Exception.__name__}: {e}")
         print("Failed to load the image")
-        return []
+        exit()
