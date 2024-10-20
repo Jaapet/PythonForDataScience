@@ -15,14 +15,16 @@ def filterstring(fun, str):
 
 def main():
 	"""
-	aaa
+	-takes 2 arguments, string (alnum and spaces only) and int
+	-if format is wrong, raises AssertionError
+	-prints the words that are greater or equal in length than the int
 	"""
 	try:
 		if len(sys.argv) != 3:
-			raise AssertionError("the arguments are bad") #check if alnum
+			raise AssertionError("the arguments are bad")
 		else:
 			args = sys.argv[1:]
-			if isinstance(args[0], str):
+			if isinstance(args[0], str) and args[0].replace(" ", "").isalnum():
 				try:
 					print(filterstring(lambda word: len(word) >= int(args[1]), args[0].split()))
 				except:
