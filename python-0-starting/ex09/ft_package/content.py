@@ -1,2 +1,3 @@
-def count_in_list(lst, element):
-	return lst.count(element)
+def count_in_list(lst, item):
+    """Counts occurrences of item in lst."""
+    return lst.count(item)
