@@ -4,6 +4,29 @@ from load_image import ft_load, print_info
 
 
 def main(path: str, le: int, to: int, ri: int, bo: int):
+    """
+    Image Processing Script using NumPy and Matplotlib.
+
+    This script loads an image, crops it based on specified dimensions,
+    converts it to grayscale, and displays the result using Matplotlib.
+
+    Functions:
+    -----------
+    main(path: str, le: int, to: int, ri: int, bo: int)
+        - Loads an image from the specified path.
+        - Crops the image using left (le), top (to),
+          right (ri), and bottom (bo) offsets.
+        - Converts the cropped image to grayscale.
+        - Displays the grayscale image with specified ticks.
+
+    Parameters:
+    -----------
+    - path (str): The file path of the image to be processed.
+    - le (int): Left crop margin.
+    - to (int): Top crop margin.
+    - ri (int): Right crop margin.
+    - bo (int): Bottom crop margin.
+    """
     try:
         img = ft_load(path)
         width, height = img.size
