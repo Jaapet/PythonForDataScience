@@ -1,5 +1,5 @@
 import numpy as np
-from PIL import Image
+import matplotlib.pyplot as plt
 from load_image import ft_load, print_info
 
 
@@ -16,7 +16,16 @@ def main(path: str):
         g_scale = crop.convert('L')
         get_rotated_idiot = ft_transpose(np.array(g_scale))
         print_info(np.array(get_rotated_idiot), "New shape after Transpose: ")
-        Image.fromarray(np.array(get_rotated_idiot, dtype=np.uint8)).show()
+
+        fig, ax = plt.subplots()
+        ax.imshow(np.array(get_rotated_idiot, dtype=np.uint8), cmap='gray')
+        ax.set_xticks(np.arange(0, np.array(get_rotated_idiot,
+                                            dtype=np.uint8).shape[1], 50))
+        ax.set_yticks(np.arange(0, np.array(get_rotated_idiot,
+                                            dtype=np.uint8).shape[0], 50))
+        ax.tick_params(axis='both', which='both', direction='out')
+        plt.show()
+
     except Exception as e:
         print(f"{Exception.__name__}: {e}")
 
