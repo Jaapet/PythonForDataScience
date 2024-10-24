@@ -24,7 +24,13 @@ def n_pop(pop: str) -> float:
 
 def main(path1: str, path2: str):
     """
-    M
+    Loads income and life expectancy data from CSV files, merges the datasets
+    based on the country, and generates a scatter plot showing life expectancy
+    versus GDP for the year 1900.
+
+    Args:
+        path1 (str): Path to the income dataset (CSV).
+        path2 (str): Path to the life expectancy dataset (CSV).
     """
     try:
         income_ds = load(path1)
